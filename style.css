@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 15px 0;
+    /* background: rgb(20, 220, 73); */
+    font-family: "Ubuntu", sans-serif;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.max-width{
+    max-width: 1400px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar .logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+}
+.navbar .logo a span{
+    color:  rgb(20, 220, 73);
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background:  rgb(20, 220, 73);
+}
+.navbar.sticky .logo a{
+    color:#fff;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color:#fff;
+}
+.navbar .menu li{
+   list-style: none;
+   display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.5 ease;
+}
+
+.navbar .menu li a:hover{
+    color: rgb(20, 220, 73);
+}
+.navbar.sticky .menu li a:hover{
+    color:#fff;
+}
+.scroll-up-button{
+    position: fixed;
+    width: 45px;
+    height: 50px;
+    background: rgb(20, 220, 73);
+    right: 30px;
+    bottom: 20px;
+    border-radius: 6px;
+    text-align: center;
+    line-height: 45px;
+    color: white;
+    z-index: 9999;
+    font-size: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-button.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.menu-btn{
+    font-size: 23px;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* home */
+
+.home{
+    display: flex;
+    background: url(images/homebg1.png) no-repeat;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+.home .max-width{
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1{
+    font-size: 30px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+}
+.home .home-content .text-3 span{
+    color: rgb(20, 220, 73);
+}
+.home .home-content a{
+    display: inline-block;
+    background: rgb(20, 220, 73);
+    color: #fff;
+    font-size: 25px;
+    padding: 12px 36px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(20, 220, 73);
+    transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+    color: rgb(20, 220, 73);
+    background: none;
+}
+
+/* similar styles used  */
+
+section{
+    padding: 70px 0;
+}
+section .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 300px; /* this is the statement to alter when changing that black line in sub text */
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+section .title::after{
+
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    font-size: 20px;
+    color: rgb(20, 220, 73);
+    padding: 5px;
+    /* background: #fff; */
+    background: url(images/bubble\ white.png);
+    transform: translateX(-50%);
+}
+/* about section css  */
+
+.about{
+    font-family: 'Poppins', sans-serif;
+    background: url(images/bubble\ white.png);
+}
+
+.about .title::after{
+    content: "whoami";
+}
+.about .about-content, .services .services-content, .proficiency .proficiency-content, .connect .connect-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.about .about-content .left{
+    width: 45%;
+}
+.about .about-content .left img{
+    /* hide this class here to change the shape, depends on will. remove this text to do that*/
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+.about .about-content .right{
+    width: 55%;
+}
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+    color: rgb(20, 220, 73);
+}
+.about .about-content .right p{
+    margin-bottom: 40px;
+    text-align: justify;
+}
+.about .about-content .right a{
+    display: inline-block;
+    background: rgb(20, 220, 73);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 10px 30px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 2px solid rgb(20, 220, 73);
+    transition: all 0.3s ease;
+}
+.about .about-content .right a:hover{
+    color: rgb(20, 220, 73);
+    background: none;
+}
+
+/* skills and services  */
+.services{
+    font-family: 'Poppins', sans-serif;
+    background: url(images/bubble\ white.png);
+}
+.services .title::after{
+    content: "What I bring to the table";
+}
+.services .services-content .card{
+    background: url(images/bubble\ white.png);
+    width: calc(33% - 20px);
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover{
+    background: rgb(20, 220, 73);
+}
+.services .services-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .services-content .card:hover .box{
+    transform: scale(1.05);
+}
+.services .services-content .card i{
+    font-size: 40px;
+    color: rgb(20, 220, 73);
+    transition: color 0.3s ease;
+}
+.services .services-content .card:hover i{
+    color:#111;
+}
+.services .services-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+
+/* proficiency section  */
+.proficiency{
+    font-family: 'Poppins', 'sans-serif';
+        background: url(images/bubble\ white.png);
+}
+.proficiency .title::after{
+    content: "What I know and learn";
+}
+.proficiency .proficiency-content .column{
+    width: calc(50% - 30px);
+}
+.proficiency .proficiency-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.proficiency .proficiency-content .left p{
+    text-align: justify;
+}
+.proficiency .proficiency-content .left a{
+    display: inline-block;
+    background: rgb(20, 220, 73);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 16px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid rgb(20, 220, 73);
+    transition: all 0.3s ease;
+}
+.proficiency .proficiency-content .left a:hover{
+    color: rgb(20, 220, 73);
+    background: none;
+}
+.proficiency .proficiency-content .right .bars{
+    margin-bottom: 15px;
+}
+.proficiency .proficiency-content .right .info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.proficiency .proficiency-content .right span{
+    font-size: 18px;
+    font-weight: 600;
+}
+.proficiency .proficiency-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgrey;
+    position: relative;
+}
+.proficiency .proficiency-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    left: 0;
+    top: 0;
+    background: rgb(20, 220, 73);
+}
+.proficiency .proficiency-content .right .htmlcss::before{
+    width: 90%;
+}
+.proficiency .proficiency-content .right .js::before{
+    width: 50%;
+}
+.proficiency .proficiency-content .right .acc::before{
+    width: 65%;
+}
+.proficiency .proficiency-content .right .figma::before{
+    width: 95%;
+}
+
+/* projects sec  */
+.projects{
+    font-family: 'Poppins', 'sans-serif';
+    background: url(images/bubble\ white.png);
+}
+.projects .title::after{
+    content: "My Designs, My Work";
+}
+/* .projects .title::before{
+    background: #fff;
+} */
+.projects .carousel .card{
+    /* background: url(images/homebg1.png); */
+    padding: 25px 35px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover{
+    background: rgb(20, 220, 73);
+}
+.projects .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.projects .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.projects .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.projects .carousel .card img{
+    /* height: 100%;
+    width: 100%; */
+    object-fit: cover;
+    border-radius: 6px;
+    border: 5px solid rgb(20, 220, 73);
+    transition: all 0.3s ease;
+}
+.projects .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 20px;
+}
+.owl-dot{
+    height: 13px;
+    width: 13px;
+    margin: 0 5px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid rgb(20, 220, 73)!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active, .owl-dot:hover{
+    background: rgb(20, 220, 73)!important;
+}
+
+/* connect sec  */
+.connect{
+    font-family: 'Poppins', 'sans-serif';
+    background: url(images/bubble\ white.png);
+}
+.connect .title::after{
+    content: "Let's CONNECT";
+}
+.connect .connect-content .column{
+    width: calc(50% - 30px);
+}
+.connect .connect-content .left p{
+    text-align: justify;
+}
+.connect .connect-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.connect .connect-content .left .icons{
+    margin: 10px 0;
+}
+.connect .connect-content .row{
+    display: flex;
+    height: 65px;
+    align-items: center;
+}
+.connect .connect-content .row .info{
+    margin-left: 30px;
+}
+.connect .connect-content .row i{
+    font-size: 25px;
+    color: rgb(20, 220, 73);
+}
+.connect .connect-content .info .head{
+    font-weight: 600;
+}
+.connect .connect-content .info .sub-title{
+    color: #111;
+}
+.connect .right form .fields{
+    display: flex;
+}
+.connect .right form .name{
+    margin-right: 10px;
+}
+.connect .right form .email{
+    margin-left: 10px;
+}
+.connect .right form .field, .connect .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.connect .right form .textarea{
+    height: 80px;
+    width: 100%;
+}
+.connect .right form .field input, .connect .right form .textarea textarea{
+    height: 100%;
+    width: 100%;
+    font-family: 'Poppins',sans-serif;
+    font-size: 17px;
+    border: 1px solid gray;
+    padding: 0 15px;
+    border-radius: 6px;
+}
+.connect .right form .textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.connect .right form .button{
+    height: 50px;
+    width: 100%;
+}
+.connect .right form .button button{
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgb(20, 220, 73);
+    background: rgb(20, 220, 73);
+    color: white;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.connect .right form .button button:hover{
+    color: rgb(20, 220, 73);
+    background: none;
+}
+/* .connect .connect-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+} */
+
+/* footer  */
+footer{
+    font-family: 'Poppins', sans-serif;
+    background: url(images/homebg1.png);
+    color: white;
+    padding: 45px 35px;
+}
+footer .column{
+    width: calc(50% - 30px);
+}
+footer .left span{
+    font-size: 20px;
+    color: rgb(20, 220, 73);
+    text-decoration: none;
+    padding: 0px 2px;
+}
+footer .left span:hover{
+    text-decoration: underline;
+    color: rgb(20, 220, 73);
+}
+footer .column{
+    display: inline-block;
+    font-size: 30px;
+}
+footer .left{
+    margin-right: 15px;
+}
+footer .right{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+footer .right .socials{
+    text-align: right;
+    padding: 0 25px;
+}
+footer .right .socials a{
+    color: rgb(20, 220, 73);
+    padding: 0 13px;
+    font-size: 30px;
+}
+
+
+/* responsive media */
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px;
+    }
+}
+@media (max-width: 1104px){
+    .about .about-content .left img{
+        /* hide this class here to change the shape, depends on will. remove this text to do that*/
+        height: 350px;
+        width: 350px;
+    }
+}
+@media (max-width: 991px){
+    .max-width{
+        padding: 0 50px;
+    }
+}
+@media (max-width: 946px){
+    .max-width{
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display: block;
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2{
+        font-size: 70px;
+    }
+    .home .home-content .text-3{
+        font-size: 35px;
+    }
+    .max-width{
+        max-width: 800px;
+    }    
+    .about .about-content .column{
+        width: 100%;
+    }
+    .about .about-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .services .services-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .proficiency .proficiency-content .column{
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .connect .connect-content .column{
+    width: 100%;
+    margin-bottom: 35px;
+    }
+}
+@media (max-width: 690px){
+    .max-width{
+        padding: 0 23px;
+    }
+    .home .home-content .text-2{
+        font-size: 60px;
+    }
+    .home .home-content .text-3{
+        font-size: 32px;
+    }
+    .services .services-content .card{
+        width: 100%;
+    }
+    .proficiency .proficiency-content .column{
+        width: 100%;
+    }
+}
+@media (max-width: 500px){
+    .home .home-content .text-2{
+        font-size: 50px;
+    }
+    .home .home-content .text-3{
+        font-size: 27px;
+    }
+}
+
